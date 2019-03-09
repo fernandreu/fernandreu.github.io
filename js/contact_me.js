@@ -21,18 +21,21 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             $.ajax({
-                url: "https://5ahuzi98bh.execute-api.eu-west-1.amazonaws.com/default/sendEmail",
+                url: "https://5ahuzi98bh.execute-api.eu-west-1.amazonaws.com/default",
                 type: "POST",
+                contentType: 'application/json',
                 headers: {
-                    'Access-Control-Allow-Origin': '*'
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Credentials': true,
                 },
-                data: {
+                data: JSON.stringify({
                     name: name,
                     company: company,
                     email: email,
                     message: message,
                     test: true,
-                },
+                }),
                 cache: false,
                 success: function(result, status, xhr) {
                     // Enable button & show success message
