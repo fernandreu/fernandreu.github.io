@@ -106,7 +106,7 @@ const projects = [
         folder: 'Fractals',
         framework: 'Qt Widgets, C++',
         dateCreated: '2013',
-        associatedFile: 'Fractals++.zip',
+        associatedFile: 'https://github.com/fernandreu/fernandreu.github.io/releases/download/v1.0/Fractals++.zip',
         pics: 5,
         picWidth: 702,
         picHeight: 640,
@@ -130,7 +130,7 @@ const projects = [
         folder: 'GraphDigitizer',
         framework: 'WPF, C#',
         dateCreated: '2012',
-        associatedFile: 'GraphDigitizer.exe',
+        associatedFile: 'https://github.com/fernandreu/fernandreu.github.io/releases/download/v1.0/GraphDigitizer.exe',
         pics: 4,
         picWidth: 763,
         picHeight: 548,
@@ -148,7 +148,7 @@ const projects = [
         folder: 'Harmonica',
         framework: 'Android, Java',
         dateCreated: '2013',
-        associatedFile: 'Harmonica.apk',
+        associatedFile: 'https://github.com/fernandreu/fernandreu.github.io/releases/download/v1.0/Harmonica.apk',
         pics: 5,
         picWidth: 800,
         picHeight: 638,
@@ -169,7 +169,7 @@ const projects = [
         folder: 'Snake',
         framework: 'Game Maker 8',
         dateCreated: '2008',
-        associatedFile: 'Snake.exe',
+        associatedFile: 'https://github.com/fernandreu/fernandreu.github.io/releases/download/v1.0/Snake.exe',
         pics: 5,
         picWidth: 640,
         picHeight: 480,
@@ -328,7 +328,7 @@ function addModal(project, destination) {
     if (project.associatedFile !== undefined) {
         actionSection += `
         <div class="col-lg-8 col-lg-offset-2 text-center">
-            <a href="Projects/${project.folder}/${project.associatedFile}" class="btn btn-lg btn-outline">
+            <a href="${project.associatedFile}" class="btn btn-lg btn-outline">
                 <i class="fa fa-download"></i> Download
             </a>
         </div>`;
