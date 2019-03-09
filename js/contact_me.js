@@ -33,7 +33,7 @@ $(function() {
                     company: company,
                     email: email,
                     message: message,
-                    test: true,
+                    // test: true,
                 }),
                 cache: false,
                 success: function(result, status, xhr) {
