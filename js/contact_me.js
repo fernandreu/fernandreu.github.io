@@ -26,8 +26,7 @@ $(function() {
                 contentType: 'application/json',
                 headers: {
                     'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': 'https://fernando.andreu.info/',
-                    'Access-Control-Allow-Credentials': true,
+                    'Access-Control-Allow-Origin': '*',
                 },
                 data: JSON.stringify({
                     name: name,
