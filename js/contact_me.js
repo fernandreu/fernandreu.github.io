@@ -36,9 +36,8 @@ $(function() {
                     // test: true,
                 }),
                 cache: false,
-                success: function(result, status, xhr) {
+                success: function() {
                     // Enable button & show success message
-                    console.log(status);
                     $("#btnSubmit").attr("disabled", false);
                     $('#success').html("<div class='alert alert-success'>");
                     $('#success > .alert-success').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
@@ -51,9 +50,8 @@ $(function() {
                     //clear all fields
                     $('#contactForm').trigger("reset");
                 },
-                error: function(result, status, xhr) {
+                error: function() {
                     // Fail message
-                    console.log(status);
                     $('#success').html("<div class='alert alert-danger'>");
                     $('#success > .alert-danger').html("<button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times;")
                         .append("</button>");
