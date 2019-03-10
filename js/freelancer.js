@@ -161,7 +161,10 @@ const projects = [
             sheet for a faster learning curve.
             
             The songs are written in the standard ABC format that is easy to understand and human-readable. The
-            visualization engine has been adapted from the Java project <a href="http://abcj.ganderband.com">ABCJ</a>.`,
+            visualization engine has been adapted from the Java project <a href="http://abcj.ganderband.com">ABCJ</a>.
+
+            <i>Note: the back-end server for this project is no longer active, and hence not all the features of the app
+             below can be tested.</i>`,
     },
     {
         title: 'Snake',
@@ -186,7 +189,7 @@ const projects = [
         title: 'Soulhunter',
         subtitle: 'Catching up with people around has never been funnier.',
         folder: 'Soulhunter',
-        framework: 'iOS, Swift',
+        framework: 'iOS, Swift, PHP',
         dateCreated: '2018',
         associatedLink: 'https://www.soulhunterapp.com',
         pics: 3,
@@ -198,7 +201,14 @@ const projects = [
             
             Are you just interested in getting to know new people?
             
-            Soulhunter allows you to catch up with new people around you avoiding any awkward situation.`,
+            Soulhunter allows you to catch up with new people around you avoiding any awkward situation.
+            
+            The client side of this project consists on a native iOS app written predominantly in Swift. This connects
+            to a back-end server written in PHP and hosted in Amazon Web Services.
+            
+            Previous iterations of this project included a native Android app written in Java; this was discontinued to
+            focus on the iOS market. To mitigate this, a port to Xamarin.Forms which will support both platforms is 
+            ongoing.`,
     },
     {
         title: 'Custom UI Editor',
@@ -213,7 +223,7 @@ const projects = [
         description: `
             This project is a migration from Windows Forms to WPF of the original <a
             href="https://github.com/OfficeDev/office-custom-ui-editor/">project</a> by Microsoft, taking advantage of
-            the MVVM pattern to produce a more streamlined UI, and adding extra features.
+            the MVVM pattern to produce a more streamlined UI while adding extra features.
 
             The main feature added is the use of a <a
             href="https://github.com/jacobslusser/ScintillaNET">ScintillaNET</a> text editor with advanced capabilities,
@@ -223,12 +233,13 @@ const projects = [
             In addition, opened Office documents can now be reloaded before applying any changes on save; this avoids
             the possible mistake of losing external changes in one of those documents.
             
-            Other features added are: a <a
-            href="https://www.codeproject.com/Articles/23731/RecentFileList-a-WPF-MRU">recent file list</a> and the
-            possibility of having more than one Office document open simultaneously.
+            Other features added are: a recent file list, extra editor actions and the possibility of having more than
+            one Office document open simultaneously.
             
-            The source code of this project is available on GitHub: <a
-            href="https://github.com/fernandreu/wpf-custom-ui-editor">https://github.com/fernandreu/wpf-custom-ui-editor</a>`,
+            The project uses Continuous Integration practices (via Amazon Pipelines) to ensure newer versions are fully
+            tested before become available to the user. In addition, new releases are automatically created on GitHub
+            when new Git tags (e.g. <code>v1.0</code>) gets pushed to the repository.
+            `,
     },
     {
         title: 'Dice Wars',
@@ -312,7 +323,7 @@ function addModal(project, destination) {
     for (let i = 0; i < lines.length; ++i) {
         lines[i] = lines[i].trim();
     }
-    // Now, join them back, and split them, but this time looking for full blank lines to determine the separation
+    // Now, join them back and split them again, but this time looking for full blank lines to determine the separation
     // between paragraphs
     lines = lines.join('\n').split('\n\n');
     for (let i = 0; i < lines.length; ++i) {
@@ -389,7 +400,7 @@ function addModal(project, destination) {
                             <p>${project.subtitle}</p>
                             ${description}
                             <ul class="list-inline item-details">
-                                <li>Framework:
+                                <li>Languages / frameworks:
                                     <strong>${project.framework}</strong>
                                 </li>
                                 <li>

@@ -390,12 +390,12 @@ footer .footer-below {
 .portfolio-modal .modal-content .item-details {
   margin: 30px 0;
 }
+.portfolio-modal .modal-content .item-details li {
+  margin: 0 20px;
+}
 @media (min-width: 991px) {
   .portfolio-modal .modal-content {
-    margin-top: 25px;
-    margin-bottom: 25px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin: 25px 100px;
   }
 }
 .portfolio-modal .close-modal {
