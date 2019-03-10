@@ -230,8 +230,8 @@ const projects = [
             such as line numbering and quick syntax highlighting. Several editor settings, such as font size and colors,
             can be customized.
             
-            In addition, opened Office documents can now be reloaded before applying any changes on save; this avoids
-            the possible mistake of losing external changes in one of those documents.
+            In addition, a <i>reload on save</i> mechanism ensures that no data is lost when saving an Office document
+            that was modified externally at the same time.
             
             Other features added are: a recent file list, extra editor actions and the possibility of having more than
             one Office document open simultaneously.
@@ -252,7 +252,7 @@ const projects = [
         picWidth: 1146,
         picHeight: 808,
         description: `
-            Select the number of players and whether they will be AI controlled or not. Each player will start in a
+            Select the number of players and whether they will be AI controlled or not. Each player will start in an
             hexagonal map with a given amount of dice distributed randomly across his territories.
 
             On each turn, a player can attack neighbour territories. The dice on each territory will be thrown to
@@ -267,7 +267,7 @@ const projects = [
     },
     {
         title: 'Password Manager',
-        subtitle: 'A static website which allows you to manage sensitive data in your preferred cloud platform .',
+        subtitle: 'A static website which allows you to manage sensitive data in your preferred cloud platform.',
         folder: 'PasswordManager',
         framework: 'Angular 7, Typescript',
         dateCreated: '2019',
@@ -276,18 +276,25 @@ const projects = [
         picWidth: 585,
         picHeight: 500,
         description: `
-            This <b>WIP</b> project started as a means of avoiding using third-party password managers whose means of 
-            storing / handling your sensitive data might not be fully detailed, which hence can raise some security and
-            data privacy concerns.
+            While there are many fully-functional, web-based password managers out there, their means of storing /
+            manipulating sensitive data might not be fully clear, which hence can raise some security and data privacy
+            concerns to users. This <b>WIP</b> project is an alternative to those as a means of mitigating those 
+            concerns.
             
-            All your personal data will be encrypted (using your master password) and stored in a private folder on the
-            cloud service. No other app will have access to that data, and only you have access to the master password.
+            In terms of data storage, this is achieved by not having storage infrastructure at all. Instead, the app
+            delegates that responsibility to a well-known cloud service of the user's choice. All your personal data
+            will be encrypted (using your master password) and stored in a private folder on that cloud service. No
+            other app will have access to that data, and only you have access to the master password.
             
-            The most suspicious users about what apps do with their data can also rest assured, as this app's code is
-            all publicly available on GitHub.
+            In terms of data manipulation, the most suspicious users can also rest assured, as all the app's code is
+            publicly available on GitHub. Therefore, every single line of code can be inspected to ensure no insecure /
+            malicious actions are taking place with sensitive data.
             
             This project uses CI / CD practices (via Travis CI) to ensure everything is properly tested prior to being
-            automatically deployed to <a href="https://fernando.andreu.info/password-manager">GitHub Pages</a>.`,
+            automatically deployed to <a href="https://fernando.andreu.info/password-manager">GitHub Pages</a>.
+
+            <i>Note: so far, the only available cloud service is Dropbox; integration with OneDrive and Google Drive is 
+            WIP.</i>`,
     },
 ];
 projects.sort(function(a, b) { return b.dateCreated - a.dateCreated; });
@@ -305,6 +312,8 @@ function getRandomInt(min, max) {
  * @param destination The HTML element which will hold the thumbnails (it should be the contents of the portfolio section)
  */
 function addThumbnails(projects, destination) {
+
+    $('.projects-placeholder').remove();
 
     let div;
     for (let i = 0; i < projects.length; ++i) {
@@ -424,7 +433,7 @@ function addModal(project, destination) {
                             <p>${project.subtitle}</p>
                             ${description}
                             <ul class="list-inline item-details">
-                                <li>Languages / frameworks:
+                                <li>Frameworks / languages:
                                     <strong>${project.framework}</strong>
                                 </li>
                                 <li>
