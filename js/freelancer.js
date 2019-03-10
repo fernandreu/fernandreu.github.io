@@ -276,9 +276,9 @@ const projects = [
         picWidth: 585,
         picHeight: 500,
         description: `
-            While there are many fully-functional, web-based password managers out there, their means of storing /
-            manipulating sensitive data might not be fully clear, which hence can raise some security and data privacy
-            concerns to users. This <b>WIP</b> project is an alternative to those as a means of mitigating those 
+            While there are many fully featured, web-based password managers out there, their means of storing /
+            manipulating sensitive data might not be entirely clear, which hence can raise some security and data
+            privacy concerns to users. This <b>WIP</b> project is an alternative to those as a means of mitigating those
             concerns.
             
             In terms of data storage, this is achieved by not having storage infrastructure at all. Instead, the app
