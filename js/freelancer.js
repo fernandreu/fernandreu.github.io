@@ -236,7 +236,7 @@ const projects = [
             Other features added are: a recent file list, extra editor actions and the possibility of having more than
             one Office document open simultaneously.
             
-            The project uses Continuous Integration practices (via Amazon Pipelines) to ensure newer versions are fully
+            The project uses Continuous Integration practices (via Azure Pipelines) to ensure newer versions are fully
             tested before become available to the user. In addition, new releases are automatically created on GitHub
             when new Git tags (e.g. <code>v1.0</code>) gets pushed to the repository.
             `,
