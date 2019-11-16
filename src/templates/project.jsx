@@ -1,9 +1,12 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
 import styled from '@emotion/styled';
+import Img from 'gatsby-image';
 import PropTypes from 'prop-types';
 import { Layout, Container, Content } from 'layouts';
 import { TagsBlock, Header, SEO } from 'components';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../styles/prism';
 
 const SuggestionBar = styled.div`
@@ -19,10 +22,16 @@ const PostSuggestion = styled.div`
   margin: 1rem 3rem 0 3rem;
 `;
 
+const CarouselContainer = styled.div`
+  margin: 0 auto 1rem auto;
+  max-width: 600px;
+  border: 1px solid black;
+`;
+
 const Project = ({ data, pageContext }) => {
   const { next, prev } = pageContext;
   const { html, frontmatter, excerpt } = data.markdownRemark;
-  const { date, title, tags, path, description } = frontmatter;
+  const { date, title, tags, path, description, screenshots } = frontmatter;
   const image = frontmatter.cover.childImageSharp.fluid;
 
   return (
@@ -36,6 +45,25 @@ const Project = ({ data, pageContext }) => {
       />
       <Header title={title} date={date} cover={image} />
       <Container>
+        <CarouselContainer>
+          {/*showThumbs has to be false for the carouse to work with Gatsby images*/}
+          <Carousel
+            showThumbs={false}
+            emulateTouch={true}
+            useKeyboardArrows={true}
+            centerMode={true}
+            centerSlidePercentage={85}
+          >
+            {screenshots.map(sh => {
+              return (
+                <div key={sh.id}>
+                  <Img fluid={sh.childImageSharp.fluid} />
+                  {/*<p className="legend">Screenshot {sh.index}</p>*/}
+                </div>
+              );
+            })}
+          </Carousel>
+        </CarouselContainer>
         <Content input={html} />
         <TagsBlock list={tags || []} />
       </Container>
@@ -91,6 +119,13 @@ export const query = graphql`
             }
             resize(width: 1200, quality: 90) {
               src
+            }
+          }
+        }
+        screenshots {
+          childImageSharp {
+            fluid(maxWidth: 1000, quality: 90, traceSVG: { color: "#2B2B2F" }) {
+              ...GatsbyImageSharpFluid_withWebp_tracedSVG
             }
           }
         }

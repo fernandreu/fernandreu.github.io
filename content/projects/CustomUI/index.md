@@ -1,6 +1,7 @@
 ---
 path: "/office-ribbonx-editor"
 cover: "./Screenshot1.png"
+screenshots: ["./Screenshot1.png", "./Screenshot2.png", "./Screenshot3.png", "./Screenshot4.png"]
 date: "2019-01-01"
 title: "Office RibbonX Editor"
 subtitle: "Edit UI files for Microsoft Office documents easily"

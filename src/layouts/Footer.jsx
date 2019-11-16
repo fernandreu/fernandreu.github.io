@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { FaGithub, FaLinkedin } from 'react-icons/all';
 
 const Wrapper = styled.footer`
   position: relative;
@@ -21,13 +22,29 @@ const Text = styled.div`
   color: ${props => props.theme.colors.white.light};
 `;
 
+const Icon = styled.a`
+  font-size: 32px;
+  padding-right: 1rem;
+  color: ${props => props.theme.colors.white.light};
+  vertical-align: middle;
+`;
+
+const Separator = styled.span`
+  margin-left: 1rem;
+  margin-right: 1rem;
+`;
+
 const Footer = () => (
   <Wrapper>
     <Text>
-      <span>
-        Fernando Andreu -{' '}
-        <a href="https://justinformentin.com">Justin Formentin</a>
-      </span>
+      <span>Fernando Andreu</span>
+      <Separator>&ndash;</Separator>
+      <Icon href="https://uk.linkedin.com/in/fernandoandreu/en">
+        <FaLinkedin />
+      </Icon>
+      <Icon href="https://github.com/fernandreu">
+        <FaGithub />
+      </Icon>
     </Text>
   </Wrapper>
 );

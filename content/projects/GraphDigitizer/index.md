@@ -1,10 +1,11 @@
 ---
 path: "/graph-digitizer"
 cover: "./Screenshot1.png"
+screenshots: ["./Screenshot1.png", "./Screenshot2.png", "./Screenshot3.png", "./Screenshot4.png"]
 date: "2012"
 title: "Graph Digitizer"
 subtitle: "Extract the numeric coordinates of a two-dimensional graph in image format"
-download: "https://github.com/fernandreu/fernandreu.github.io/releases/download/v1.0/GraphDigitizer.exe"
+github: "https://github.com/fernandreu/graph-digitizer"
 published: true
 tags: ['C#', 'WPF', 'Desktop']
 ---

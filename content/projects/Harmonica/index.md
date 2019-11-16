@@ -1,6 +1,7 @@
 ---
 path: "/harmonica"
 cover: "./Screenshot1.png"
+screenshots: ["./Screenshot1.png", "./Screenshot2.png", "./Screenshot3.png", "./Screenshot4.png", "./Screenshot5.png"]
 date: "2013"
 title: "Harmonica"
 subtitle: "Play, edit or export songs while you get familiar with the harmonica"

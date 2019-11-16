@@ -1,6 +1,7 @@
 ---
 path: "/password-manager"
 cover: "./Screenshot1.png"
+screenshots: ["./Screenshot1.png", "./Screenshot2.png", "./Screenshot3.png", "./Screenshot4.png"]
 date: "2019"
 title: "Password Manager"
 subtitle: "A static website which allows you to manage sensitive data in your preferred cloud platform"

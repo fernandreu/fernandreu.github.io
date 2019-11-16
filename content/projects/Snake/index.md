@@ -1,6 +1,7 @@
 ---
 path: "/snake"
 cover: "./Screenshot1.png"
+screenshots: ["./Screenshot1.png", "./Screenshot2.png", "./Screenshot3.png", "./Screenshot4.png", "./Screenshot5.png"]
 date: "2008"
 title: "Snake"
 subtitle: "A multiplayer remake of the classic Nokia game. Survive against other snakes for as long as you can"

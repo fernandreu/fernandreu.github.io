@@ -1,6 +1,7 @@
 ---
 path: "/dice-wars"
 cover: "./Screenshot1.png"
+screenshots: ["./Screenshot1.png", "./Screenshot2.png", "./Screenshot3.png", "./Screenshot4.png", "./Screenshot5.png", "./Screenshot6.png"]
 date: "2015"
 title: "Dice Wars"
 subtitle: "A remake of the original Risk-style Flash game with extra functionality"
