@@ -21,7 +21,7 @@
         "extensions": [".js", ".jsx"]
       }
     ],
-    "prettier/prettier": ["warn", "error", {
+    "prettier/prettier": ["error", {
      "endOfLine":"auto"
    }]
   },

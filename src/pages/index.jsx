@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import styled from '@emotion/styled';
-import { Header, PostList } from 'components';
+import { Header, ProjectList } from 'components';
 import { Layout } from 'layouts';
 
 const PostWrapper = styled.div`
@@ -24,18 +24,21 @@ const Index = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
-      <Helmet title={'Home Page'} />
-      <Header title="Home Page">Gatsby Tutorial Starter</Header>
+      <Helmet title={'Fernando Andreu'} />
+      <Header title="Fernando Andreu">
+        Software Developer &ndash; Aeronautical Engineer
+      </Header>
       <PostWrapper>
         {edges.map(({ node }) => {
           const { id, excerpt, frontmatter } = node;
-          const { cover, path, title, date } = frontmatter;
+          const { cover, path, title, subtitle, date } = frontmatter;
           return (
-            <PostList
+            <ProjectList
               key={id}
               cover={cover.childImageSharp.fluid}
               path={path}
               title={title}
+              subtitle={subtitle}
               date={date}
               excerpt={excerpt}
             />
@@ -59,6 +62,7 @@ Index.propTypes = {
               cover: PropTypes.object.isRequired,
               path: PropTypes.string.isRequired,
               title: PropTypes.string.isRequired,
+              subtitle: PropTypes.string.isRequired,
               date: PropTypes.string.isRequired,
               tags: PropTypes.array,
             }),
@@ -81,9 +85,10 @@ export const query = graphql`
           excerpt(pruneLength: 75)
           frontmatter {
             title
+            subtitle
             path
             tags
-            date(formatString: "MM.DD.YYYY")
+            date(formatString: "YYYY")
             cover {
               childImageSharp {
                 fluid(
