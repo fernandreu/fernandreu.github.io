@@ -1,14 +1,14 @@
 {
-  "name": "gatsby-tutorial-starter",
-  "author": "Justin Formentin",
-  "title": "Gatsby V2 Tutorial Starter",
-  "description": "My Blog",
-  "homepage": "https://gatsby-tutorial-starter.netlify.com",
+  "name": "fernando-andreu-portfolio",
+  "author": "Fernando Andreu",
+  "title": "Fernando Andreu",
+  "description": "My Personal Portfolio",
+  "homepage": "https://fernando.andreu.info",
   "license": "MIT",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/justinformentin/gatsby-v2-tutorial-starter"
+    "url": "https://github.com/fernandreu/fernandreu.github.io"
   },
   "scripts": {
     "develop": "gatsby develop",
