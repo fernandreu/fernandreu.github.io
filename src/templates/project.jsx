@@ -28,10 +28,24 @@ const CarouselContainer = styled.div`
   border: 1px solid black;
 `;
 
+const ActionLink = styled.a`
+  font-size: 1.1rem;
+  font-weight: 700;
+`;
+
 const Project = ({ data, pageContext }) => {
   const { next, prev } = pageContext;
   const { html, frontmatter, excerpt } = data.markdownRemark;
-  const { date, title, tags, path, description, screenshots } = frontmatter;
+  const {
+    date,
+    title,
+    github,
+    download,
+    tags,
+    path,
+    description,
+    screenshots,
+  } = frontmatter;
   const image = frontmatter.cover.childImageSharp.fluid;
 
   return (
@@ -51,7 +65,7 @@ const Project = ({ data, pageContext }) => {
             showThumbs={false}
             emulateTouch={true}
             useKeyboardArrows={true}
-            centerMode={true}
+            centerMode={false}
             centerSlidePercentage={85}
           >
             {screenshots.map(sh => {
@@ -66,6 +80,8 @@ const Project = ({ data, pageContext }) => {
         </CarouselContainer>
         <Content input={html} />
         <TagsBlock list={tags || []} />
+        {github ? <ActionLink href={github}>View on GitHub</ActionLink> : ''}
+        {download ? <ActionLink href={download}>Download</ActionLink> : ''}
       </Container>
       <SuggestionBar>
         <PostSuggestion>
@@ -107,6 +123,8 @@ export const query = graphql`
         date
         title
         subtitle
+        github
+        download
         tags
         cover {
           childImageSharp {
