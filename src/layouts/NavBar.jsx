@@ -8,6 +8,12 @@ const StyledLink = styled(Link)`
   display: flex;
   font-weight: 700;
   align-items: center;
+  font-size: 1.5rem;
+  color: ${props => props.theme.colors.white.base};
+  transition: all ${props => props.theme.transitions.default.duration};
+  &:hover {
+    color: ${props => props.theme.colors.white.grey};
+  }
 `;
 
 const Nav = styled.nav`
@@ -29,9 +35,7 @@ const Nav = styled.nav`
 
 const NavBar = () => (
   <Headroom calcHeightOnResize disableInlineStyles>
-    <StyledLink to="/">
-      <img src={logo} alt="Gatsby Logo" />
-    </StyledLink>
+    <StyledLink to="/">FA</StyledLink>
     <Nav>
       <Link to="/">Home</Link>
       <Link to="/projects">Projects</Link>

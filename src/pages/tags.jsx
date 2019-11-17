@@ -8,7 +8,9 @@ const Tags = ({ pageContext }) => {
 
   return (
     <Layout>
-      <Header title="Tags Page">Gatsby Tutorial Starter</Header>
+      <Header title="Tags – Fernando Andreu">
+        Software Developer &ndash; Aeronautical Engineer
+      </Header>
       <Container>
         <TagsBlock list={tags} />
       </Container>
