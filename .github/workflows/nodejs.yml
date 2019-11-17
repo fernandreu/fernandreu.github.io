@@ -35,6 +35,11 @@ jobs:
 
     steps:
       - uses: actions/checkout@v1
+      - name: Config git name / email
+        run: |
+          git init
+          git config user.email "2480661+fernandreu@users.noreply.github.com"
+          git config user.name "fernandreu"
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
