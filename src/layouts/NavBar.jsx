@@ -8,7 +8,7 @@ const StyledLink = styled(Link)`
   display: flex;
   font-weight: 700;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: ${props => props.theme.colors.white.base};
   transition: all ${props => props.theme.transitions.default.duration};
   &:hover {
@@ -35,7 +35,7 @@ const Nav = styled.nav`
 
 const NavBar = () => (
   <Headroom calcHeightOnResize disableInlineStyles>
-    <StyledLink to="/">FA</StyledLink>
+    <StyledLink to="/">Fernando Andreu</StyledLink>
     <Nav>
       <Link to="/">Home</Link>
       <Link to="/projects">Projects</Link>

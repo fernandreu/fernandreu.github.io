@@ -62,8 +62,8 @@ class Contact extends React.Component {
   render() {
     return (
       <Layout>
-        <Helmet title={'Contact Fernando Andreu'} />
-        <Header title="Contact Fernando Andreu">
+        <Helmet title={'Contact Me'} />
+        <Header title="Contact Me">
           Software Developer &ndash; Aeronautical Engineer
         </Header>
         <Container center={this.center}>

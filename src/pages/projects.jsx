@@ -9,8 +9,8 @@ const Projects = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
-      <Helmet title={'Projects – Fernando Andreu'} />
-      <Header title="Projects – Fernando Andreu">
+      <Helmet title={'Personal Projects'} />
+      <Header title="Personal Projects">
         Software Developer &ndash; Aeronautical Engineer
       </Header>
       {edges.map(({ node }) => (

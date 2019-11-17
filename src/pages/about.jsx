@@ -21,8 +21,8 @@ const List = styled.ul`
 
 const About = center => (
   <Layout>
-    <Helmet title={'About Fernando Andreu'} />
-    <Header title="About Fernando Andreu">
+    <Helmet title={'About Me'} />
+    <Header title="About Me">
       Software Developer &ndash; Aeronautical Engineer
     </Header>
     <Container center={center}>

@@ -8,7 +8,7 @@ const Tags = ({ pageContext }) => {
 
   return (
     <Layout>
-      <Header title="Tags – Fernando Andreu">
+      <Header title="Project Tags">
         Software Developer &ndash; Aeronautical Engineer
       </Header>
       <Container>
