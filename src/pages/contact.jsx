@@ -26,34 +26,73 @@ const List = styled.ul`
   text-align: left;
 `;
 
-const Contact = center => (
-  <Layout>
-    <Helmet title={'Contact Fernando Andreu'} />
-    <Header title="Contact Fernando Andreu">
-      Software Developer &ndash; Aeronautical Engineer
-    </Header>
-    <Container center={center}>
-      <Form method="post" action="#">
-        <label htmlFor="name">Name</label>
-        <input type="text" name="name" id="name" />
+class Contact extends React.Component {
+  constructor(props) {
+    super(props);
+    this.center = props.center;
+  }
 
-        <label htmlFor="email">Email</label>
-        <input type="email" name="email" id="email" />
+  handleSubmit(e) {
+    e.preventDefault();
 
-        <label htmlFor="subject">Subject</label>
-        <input type="text" name="subject" id="subject" />
+    const form = e.target;
 
-        <label htmlFor="message">Message</label>
-        <textarea name="message" id="message" rows="5" />
+    // TODO: Input validation
+    const data = {};
+    for (const element of form.elements) {
+      if (element.tagName !== 'INPUT' && element.tagName !== 'TEXTAREA') {
+        continue;
+      }
+      data[element.id] = element.value;
+    }
 
-        <div className="buttons">
-          <button type="submit">Send</button>
-          <input type="reset" value="Clear" />
-        </div>
-      </Form>
-    </Container>
-  </Layout>
-);
+    // TODO: Better success / error feedback (e.g. a green / red box next to the buttons saying so)
+    fetch('https://5ahuzi98bh.execute-api.eu-west-1.amazonaws.com/default', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+      },
+      body: JSON.stringify(data),
+    })
+      .then(() => form.reset())
+      .catch(error => alert(error));
+  }
+
+  render() {
+    return (
+      <Layout>
+        <Helmet title={'Contact Fernando Andreu'} />
+        <Header title="Contact Fernando Andreu">
+          Software Developer &ndash; Aeronautical Engineer
+        </Header>
+        <Container center={this.center}>
+          <Form method="post" onSubmit={this.handleSubmit}>
+            <label htmlFor="name">Name</label>
+            <input type="text" name="name" id="name" />
+
+            <label htmlFor="email">Email</label>
+            <input type="email" name="email" id="email" />
+
+            <label htmlFor="company">Company</label>
+            <input type="text" name="company" id="company" />
+
+            <label htmlFor="subject">Subject</label>
+            <input type="text" name="subject" id="subject" />
+
+            <label htmlFor="message">Message</label>
+            <textarea name="message" id="message" rows="5" />
+
+            <div className="buttons">
+              <button type="submit">Send</button>
+              <input type="reset" value="Clear" />
+            </div>
+          </Form>
+        </Container>
+      </Layout>
+    );
+  }
+}
 
 export default Contact;
 
