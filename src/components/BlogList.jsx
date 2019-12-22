@@ -3,8 +3,8 @@ import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
 import Img from 'gatsby-image';
-import { TagsBlock } from 'components';
-import { Container } from 'layouts';
+import { TagsBlock } from '../components';
+import { Container } from '../layouts';
 
 const Wrapper = styled.article`
   margin: 0 3rem;
@@ -79,7 +79,7 @@ const Information = styled.div`
 
 const Date = styled.div`
   margin-top: 1rem;
-  color: ${props => props.theme.colors.black.lighter};
+  color: ${props => props.theme.colors.black.light};
 `;
 
 const Title = styled.h1`
