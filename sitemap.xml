@@ -8,9 +8,13 @@
 <url> <loc>https://fernando.andreu.info/tags/Desktop</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://fernando.andreu.info/tags/Game</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://fernando.andreu.info/tags/Game Maker 8</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://fernando.andreu.info/tags/Gatsby</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://fernando.andreu.info/tags/Java</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://fernando.andreu.info/tags/JavaScript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://fernando.andreu.info/tags/Node.js</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://fernando.andreu.info/tags/PHP</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://fernando.andreu.info/tags/Qt</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://fernando.andreu.info/tags/React</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://fernando.andreu.info/tags/Swift</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://fernando.andreu.info/tags/TypeScript</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://fernando.andreu.info/tags/WPF</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -22,8 +26,9 @@
 <url> <loc>https://fernando.andreu.info/harmonica</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://fernando.andreu.info/dice-wars</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://fernando.andreu.info/soulhunter</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://fernando.andreu.info/password-manager</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://fernando.andreu.info/office-ribbonx-editor</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://fernando.andreu.info/password-manager</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://fernando.andreu.info/portfolio</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://fernando.andreu.info/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://fernando.andreu.info/contact/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://fernando.andreu.info/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
