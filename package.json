@@ -20,8 +20,8 @@
     "lint-errors": "eslint src/**/*.{js,jsx} --quiet",
     "lint": "eslint src/**/*.{js,jsx}",
     "start": "npm run develop",
-    "deploy": "gatsby build && gh-pages -d public -b master",
-    "deploy-ci": "gatsby build && gh-pages -d public -b master -r https://$GH_TOKEN@github.com/fernandreu/fernandreu.github.io.git"
+    "deploy": "gatsby build && gh-pages -d public -b master --dotfiles",
+    "deploy-ci": "gatsby build && gh-pages -d public -b master -r https://$GH_TOKEN@github.com/fernandreu/fernandreu.github.io.git --dotfiles"
   },
   "dependencies": {
     "@babel/core": "^7.6.0",
